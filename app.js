@@ -11,3 +11,19 @@ function adicionarAmigo() {
         document.querySelector("#amigo").value = "";
     }
 }
+
+function atualizarLista() {
+    let listaAmigos = document.querySelector("#listaAmigos");
+    listaAmigos.innerHTML = "";
+    for (let i = 0; i < amigos.length; i++) {
+        const amigo = amigos[i];
+        
+        const item = document.createElement("li");
+        
+        // modifiquei o valor do i apenas na exebiçao
+        item.textContent = `${i + 1} - ${amigo}`;
+
+        listaAmigos.appendChild(item);
+    }
+    
+}
